@@ -15,7 +15,6 @@
 		645F462E264D075000D4A467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645F462D264D075000D4A467 /* Assets.xcassets */; };
 		645F4631264D075000D4A467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645F462F264D075000D4A467 /* LaunchScreen.storyboard */; };
 		645F463C264D0B2700D4A467 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645F463B264D0B2700D4A467 /* Constants.swift */; };
-		645F463E264D799D00D4A467 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645F463D264D799D00D4A467 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		645F4630264D075000D4A467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		645F4632264D075000D4A467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		645F463B264D0B2700D4A467 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		645F463D264D799D00D4A467 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,6 @@
 				645F462D264D075000D4A467 /* Assets.xcassets */,
 				645F462F264D075000D4A467 /* LaunchScreen.storyboard */,
 				645F4632264D075000D4A467 /* Info.plist */,
-				645F462A264D075000D4A467 /* Todo_iOS.xcdatamodeld */,
 			);
 			path = "Todo iOS";
 			sourceTree = "<group>";
@@ -79,7 +76,7 @@
 		645F4638264D07B000D4A467 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				645F463D264D799D00D4A467 /* Item.swift */,
+				645F462A264D075000D4A467 /* Todo_iOS.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,7 +171,6 @@
 				645F4626264D075000D4A467 /* TodoViewController.swift in Sources */,
 				645F462C264D075000D4A467 /* Todo_iOS.xcdatamodeld in Sources */,
 				645F4622264D075000D4A467 /* AppDelegate.swift in Sources */,
-				645F463E264D799D00D4A467 /* Item.swift in Sources */,
 				645F4624264D075000D4A467 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
