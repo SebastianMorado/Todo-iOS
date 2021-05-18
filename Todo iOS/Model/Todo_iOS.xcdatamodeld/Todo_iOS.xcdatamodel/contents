@@ -5,12 +5,13 @@
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="parentCategory" inverseEntity="Item"/>
     </entity>
     <entity name="Item" representedClassName=".Item" syncable="YES" codeGenerationType="class">
+        <attribute name="dateCreated" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="done" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="title" attributeType="String"/>
         <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="items" inverseEntity="Category"/>
     </entity>
     <elements>
-        <element name="Item" positionX="15925.54296875" positionY="9635.08203125" width="128" height="88"/>
         <element name="Category" positionX="15622.23828125" positionY="9589.4765625" width="128" height="73"/>
+        <element name="Item" positionX="15925.54296875" positionY="9635.08203125" width="128" height="103"/>
     </elements>
 </model>

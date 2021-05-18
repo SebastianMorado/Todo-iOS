@@ -62,6 +62,7 @@ class TodoViewController: UITableViewController {
             let newItem = Item(context: self.context)
             newItem.title = textField.text ?? "New Item"
             newItem.done = false
+            newItem.dateCreated = Date()
             newItem.parentCategory = self.selectedCategory
             self.itemArray.append(newItem)
             self.saveItems()
@@ -92,6 +93,7 @@ class TodoViewController: UITableViewController {
         if let initialPredicate = request.predicate {
             predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [initialPredicate, predicate])
         }
+        request.sortDescriptors = [NSSortDescriptor(key: "dateCreated", ascending: true)]
         request.predicate = predicate
         do {
             itemArray = try context.fetch(request)
@@ -110,7 +112,6 @@ extension TodoViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let request : NSFetchRequest<Item> = Item.fetchRequest()
         request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
-        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         
         loadItems(with: request)
         
