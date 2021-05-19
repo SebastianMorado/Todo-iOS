@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class TodoViewController: UITableViewController {
+class TodoViewController: SwipeTableViewController {
     
     
     var itemArray : [Item] = []
@@ -33,7 +33,7 @@ class TodoViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.todoCellIdentifier, for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         cell.textLabel?.text = itemArray[indexPath.row].title
         cell.accessoryType = itemArray[indexPath.row].done ? .checkmark : .none
         
@@ -94,13 +94,19 @@ class TodoViewController: UITableViewController {
             predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [initialPredicate, predicate])
         }
         request.sortDescriptors = [NSSortDescriptor(key: "dateCreated", ascending: true)]
-        request.predicate = predicate
+        request.predicate = predicateß
         do {
             itemArray = try context.fetch(request)
         } catch {
             print(error)
         }
         tableView.reloadData()
+    }
+    
+    override func updateModel(at indexPath: IndexPath) {
+        context.delete(itemArray[indexPath.row])
+        itemArray.remove(at: indexPath.row)
+        saveItems()
     }
 
 }

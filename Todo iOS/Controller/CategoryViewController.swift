@@ -7,8 +7,9 @@
 
 import UIKit
 import CoreData
+import SwipeCellKit
 
-class CategoryViewController: UITableViewController {
+class CategoryViewController: SwipeTableViewController {
     
     var categoryArray : [Category] = []
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -29,7 +30,7 @@ class CategoryViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.categoryCellIdentifier, for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         cell.textLabel?.text = categoryArray[indexPath.row].name
         
         return cell
@@ -70,6 +71,12 @@ class CategoryViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    override func updateModel(at indexPath: IndexPath) {
+        context.delete(categoryArray[indexPath.row])
+        categoryArray.remove(at: indexPath.row)
+        saveCategories()
+    }
+    
     //MARK: - Add new categories
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
@@ -99,3 +106,4 @@ class CategoryViewController: UITableViewController {
     
 
 }
+

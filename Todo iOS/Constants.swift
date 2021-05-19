@@ -8,8 +8,7 @@
 import Foundation
 
 struct K {
-    static let todoCellIdentifier = "ToDoItemCell"
-    static let categoryCellIdentifier = "CategoryCell"
+    static let cellIdentifier = "Cell"
     static let todoArrayKey = "ToDoListArray"
     static let segueFromCategoryToItems = "goToItems"
 }

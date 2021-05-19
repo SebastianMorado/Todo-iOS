@@ -1,0 +1,6 @@
+framework module Pods_Todo_iOS {
+  umbrella header "Pods-Todo iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
