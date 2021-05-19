@@ -94,7 +94,7 @@ class TodoViewController: SwipeTableViewController {
             predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [initialPredicate, predicate])
         }
         request.sortDescriptors = [NSSortDescriptor(key: "dateCreated", ascending: true)]
-        request.predicate = predicateß
+        request.predicate = predicate
         do {
             itemArray = try context.fetch(request)
         } catch {
