@@ -32,8 +32,7 @@ class CategoryViewController: SwipeTableViewController {
     // MARK: - TableView data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return categoryArray.count 
+        return categoryArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
