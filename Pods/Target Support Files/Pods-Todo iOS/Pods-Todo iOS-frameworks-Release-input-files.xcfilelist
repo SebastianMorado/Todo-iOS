@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Todo iOS/Pods-Todo iOS-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework
 ${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework

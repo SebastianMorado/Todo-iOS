@@ -7,9 +7,11 @@
 
 import UIKit
 import CoreData
+import ChameleonFramework
 
 class TodoViewController: SwipeTableViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var itemArray : [Item] = []
     var selectedCategory : Category? {
@@ -21,7 +23,21 @@ class TodoViewController: SwipeTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //print(Bundle.main.resourceURL)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //Change colors of navbar and titles
+        let bgColor = UIColor(hexString: selectedCategory!.color!) ?? UIColor.white
+        let textColor = ContrastColorOf(bgColor, returnFlat: true)
+        guard let navBar = navigationController?.navigationBar else { fatalError()}
+        navBar.tintColor = textColor
+        navBar.backgroundColor = bgColor
+        navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : textColor]
+        title = selectedCategory!.name
+        searchBar.barTintColor = bgColor
+        searchBar.searchTextField.backgroundColor = UIColor.white
     }
     
     //MARK: - UITableViewDataSource
@@ -36,6 +52,11 @@ class TodoViewController: SwipeTableViewController {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         cell.textLabel?.text = itemArray[indexPath.row].title
         cell.accessoryType = itemArray[indexPath.row].done ? .checkmark : .none
+        
+        //Uncomment code if you want entries to have a gradient background color
+        //
+        //cell.backgroundColor = UIColor(hexString: selectedCategory!.color!)?.darken(byPercentage: CGFloat(indexPath.row) / (CGFloat(itemArray.count) + 10))
+        //cell.textLabel?.textColor = ContrastColorOf(cell.backgroundColor!, returnFlat: true)
         
         return cell
     }

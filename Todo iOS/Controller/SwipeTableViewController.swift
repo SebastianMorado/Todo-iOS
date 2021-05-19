@@ -13,7 +13,10 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80
+        
+        navigationController?.navigationBar.barStyle = .black
     }
+    
     
     //MARK: - TableView Datasource Methods
     
