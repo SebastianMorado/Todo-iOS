@@ -12,8 +12,9 @@ import ChameleonFramework
 
 class CategoryViewController: SwipeTableViewController {
     
-    var categoryArray : [Category] = []
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private var categoryArray : [Category] = []
+    private var rowToEdit : IndexPath?
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class CategoryViewController: SwipeTableViewController {
     override func viewWillAppear(_ animated: Bool) {
         guard let navBar = navigationController?.navigationBar else { fatalError()}
         navBar.backgroundColor = UIColor.white
+        navBar.tintColor = UIColor.label
         navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
     }
 
@@ -54,17 +56,23 @@ class CategoryViewController: SwipeTableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? TodoViewController {
-            if let indexPath = tableView.indexPathForSelectedRow {
+        if segue.identifier == K.segueFromCategoryToItems {
+            if let destinationVC = segue.destination as? TodoViewController, let indexPath = tableView.indexPathForSelectedRow{
                 destinationVC.selectedCategory = categoryArray[indexPath.row]
             }
+        } else if segue.identifier == K.segueFromItemsToDetails {
+            if let destinationVC = segue.destination as? EditCategoryViewController{
+                destinationVC.selectedCategory = categoryArray[rowToEdit!.row]
+                destinationVC.delegate = self
+            }
         }
+        
     }
     
     
     //MARK: - Data Manipulation
     
-    func saveCategories() {
+    private func saveCategories() {
         do {
             try context.save()
         } catch {
@@ -89,6 +97,7 @@ class CategoryViewController: SwipeTableViewController {
     }
     
     override func editItems(at indexPath: IndexPath) {
+        rowToEdit = indexPath
         performSegue(withIdentifier: K.segueFromItemsToDetails, sender: self)
     }
     

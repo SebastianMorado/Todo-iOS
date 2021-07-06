@@ -13,6 +13,7 @@ class TodoViewController: SwipeTableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    private var rowToEdit : IndexPath?
     var itemArray : [Item] = []
     var selectedCategory : Category? {
         didSet{
@@ -99,7 +100,7 @@ class TodoViewController: SwipeTableViewController {
     
     //MARK: - Model Manipulation Methods
     
-    func saveItems() {
+    private func saveItems() {
         do {
             try context.save()
         } catch {
@@ -130,7 +131,18 @@ class TodoViewController: SwipeTableViewController {
     }
     
     override func editItems(at indexPath: IndexPath) {
+        rowToEdit = indexPath
         performSegue(withIdentifier: K.segueFromItemsToDetails, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.segueFromItemsToDetails {
+            if let destinationVC = segue.destination as? EditItemViewController{
+                destinationVC.selectedItem = itemArray[rowToEdit!.row]
+                destinationVC.delegate = self
+            }
+        }
+        
     }
 
 }
