@@ -11,4 +11,5 @@ struct K {
     static let cellIdentifier = "Cell"
     static let todoArrayKey = "ToDoListArray"
     static let segueFromCategoryToItems = "goToItems"
+    static let segueFromItemsToDetails = "goToDetails"
 }

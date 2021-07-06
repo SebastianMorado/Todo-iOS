@@ -54,11 +54,11 @@ class CategoryViewController: SwipeTableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! TodoViewController
-        if let indexPath = tableView.indexPathForSelectedRow {
-            destinationVC.selectedCategory = categoryArray[indexPath.row]
+        if let destinationVC = segue.destination as? TodoViewController {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                destinationVC.selectedCategory = categoryArray[indexPath.row]
+            }
         }
-        
     }
     
     
@@ -86,6 +86,10 @@ class CategoryViewController: SwipeTableViewController {
         context.delete(categoryArray[indexPath.row])
         categoryArray.remove(at: indexPath.row)
         saveCategories()
+    }
+    
+    override func editItems(at indexPath: IndexPath) {
+        performSegue(withIdentifier: K.segueFromItemsToDetails, sender: self)
     }
     
     //MARK: - Add new categories

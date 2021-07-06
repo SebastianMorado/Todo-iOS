@@ -31,19 +31,29 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         guard orientation == .right else { return nil }
     
-            let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-                self.updateModel(at: indexPath)
-            }
-
-            // customize the action appearance
-            deleteAction.image = UIImage(named: "delete-icon")
-
-            return [deleteAction]
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+            self.updateModel(at: indexPath)
+        }
+        
+        let editAction = SwipeAction(style: .destructive, title: "Edit") { action, indexPath in
+            self.editItems(at: indexPath)
+        }
+        
+        // customize the action appearance
+        deleteAction.image = UIImage(named: "delete-icon")
+        editAction.image = UIImage(systemName: "pencil")
+        editAction.backgroundColor = UIColor.flatGreen()
+        
+        return [deleteAction, editAction]
     }
 
 
     func updateModel(at indexPath: IndexPath) {
         //used to delete swiped cells, overriden in subclasses
+    }
+    
+    func editItems(at indexPath: IndexPath) {
+        //used to edit swiped cells, overriden in subclasses
     }
 
 }

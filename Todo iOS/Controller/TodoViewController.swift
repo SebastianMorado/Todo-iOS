@@ -53,13 +53,10 @@ class TodoViewController: SwipeTableViewController {
         cell.textLabel?.text = itemArray[indexPath.row].title
         cell.accessoryType = itemArray[indexPath.row].done ? .checkmark : .none
         
-        //Uncomment code if you want entries to have a gradient background color
-        //
-        //cell.backgroundColor = UIColor(hexString: selectedCategory!.color!)?.darken(byPercentage: CGFloat(indexPath.row) / (CGFloat(itemArray.count) + 10))
-        //cell.textLabel?.textColor = ContrastColorOf(cell.backgroundColor!, returnFlat: true)
         
         return cell
     }
+    
     
     //MARK: - UITableViewDelegate
     
@@ -69,6 +66,8 @@ class TodoViewController: SwipeTableViewController {
         saveItems()
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    
     
     //MARK: - Add New Items
 
@@ -128,6 +127,10 @@ class TodoViewController: SwipeTableViewController {
         context.delete(itemArray[indexPath.row])
         itemArray.remove(at: indexPath.row)
         saveItems()
+    }
+    
+    override func editItems(at indexPath: IndexPath) {
+        performSegue(withIdentifier: K.segueFromItemsToDetails, sender: self)
     }
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643EB9BB26937683006DE187 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643EB9BA26937683006DE187 /* EditItemViewController.swift */; };
 		6442189C2653F93B00EA3138 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6442189B2653F93B00EA3138 /* CategoryViewController.swift */; };
 		645F4622264D075000D4A467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645F4621264D075000D4A467 /* AppDelegate.swift */; };
 		645F4624264D075000D4A467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645F4623264D075000D4A467 /* SceneDelegate.swift */; };
@@ -17,10 +18,12 @@
 		645F4631264D075000D4A467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645F462F264D075000D4A467 /* LaunchScreen.storyboard */; };
 		645F463C264D0B2700D4A467 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645F463B264D0B2700D4A467 /* Constants.swift */; };
 		6468B09626550ECA009AF28A /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468B09526550ECA009AF28A /* SwipeTableViewController.swift */; };
+		646A7A9A26943E0D008E2E9F /* EditCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646A7A9926943E0D008E2E9F /* EditCategoryViewController.swift */; };
 		B79F52F9C4EBA755EA57AD1B /* Pods_Todo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A54F08EDD615D8BD310FEF57 /* Pods_Todo_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		643EB9BA26937683006DE187 /* EditItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
 		6442189B2653F93B00EA3138 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		645F461E264D075000D4A467 /* Todo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		645F4621264D075000D4A467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		645F4632264D075000D4A467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		645F463B264D0B2700D4A467 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6468B09526550ECA009AF28A /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
+		646A7A9926943E0D008E2E9F /* EditCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryViewController.swift; sourceTree = "<group>"; };
 		A54F08EDD615D8BD310FEF57 /* Pods_Todo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CE1A4DA03BC2E046375EB1 /* Pods-Todo iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo iOS.release.xcconfig"; path = "Target Support Files/Pods-Todo iOS/Pods-Todo iOS.release.xcconfig"; sourceTree = "<group>"; };
 		F9723A83C21D510763E40D13 /* Pods-Todo iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo iOS.debug.xcconfig"; path = "Target Support Files/Pods-Todo iOS/Pods-Todo iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				6468B09526550ECA009AF28A /* SwipeTableViewController.swift */,
 				6442189B2653F93B00EA3138 /* CategoryViewController.swift */,
 				645F4625264D075000D4A467 /* TodoViewController.swift */,
+				643EB9BA26937683006DE187 /* EditItemViewController.swift */,
+				646A7A9926943E0D008E2E9F /* EditCategoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,11 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643EB9BB26937683006DE187 /* EditItemViewController.swift in Sources */,
 				645F463C264D0B2700D4A467 /* Constants.swift in Sources */,
 				645F4626264D075000D4A467 /* TodoViewController.swift in Sources */,
 				645F462C264D075000D4A467 /* Todo_iOS.xcdatamodeld in Sources */,
 				6468B09626550ECA009AF28A /* SwipeTableViewController.swift in Sources */,
 				645F4622264D075000D4A467 /* AppDelegate.swift in Sources */,
+				646A7A9A26943E0D008E2E9F /* EditCategoryViewController.swift in Sources */,
 				6442189C2653F93B00EA3138 /* CategoryViewController.swift in Sources */,
 				645F4624264D075000D4A467 /* SceneDelegate.swift in Sources */,
 			);
