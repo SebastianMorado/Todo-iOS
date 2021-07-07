@@ -27,7 +27,7 @@ class TodoViewController: SwipeTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 60
+        tableView.rowHeight = 70
     }
     
     override func viewWillAppear(_ animated: Bool) {
