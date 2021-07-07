@@ -9,11 +9,9 @@ import UIKit
 import SwipeCellKit
 
 class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 80
-        
         navigationController?.navigationBar.barStyle = .black
     }
     
@@ -29,8 +27,10 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        
+        //adds swipe functionality to each row
         guard orientation == .right else { return nil }
-    
+        
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
             self.updateModel(at: indexPath)
         }
@@ -55,5 +55,6 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
     func editItems(at indexPath: IndexPath) {
         //used to edit swiped cells, overriden in subclasses
     }
+    
 
 }

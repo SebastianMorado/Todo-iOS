@@ -19,6 +19,7 @@ class CategoryViewController: SwipeTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
+        tableView.rowHeight = 70
         loadCategories()
     }
     
@@ -41,11 +42,13 @@ class CategoryViewController: SwipeTableViewController {
         
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         cell.textLabel?.text = categoryArray[indexPath.row].name
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         cell.backgroundColor = UIColor.init(hexString: categoryArray[indexPath.row].color!)
         cell.textLabel?.textColor = ContrastColorOf(cell.backgroundColor!, returnFlat: true)
         
         return cell
     }
+    
     
     //MARK: - TableView Delegate Methods
     
@@ -107,7 +110,10 @@ class CategoryViewController: SwipeTableViewController {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Category", message: "", preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "Add Category", style: .default) { (action) in
+        let cancel = UIAlertAction(title: "Cancel", style: .default) { (action) in
+        }
+        
+        let action = UIAlertAction(title: "Add", style: .default) { (action) in
             let newCategory = Category(context: self.context)
             newCategory.name = textField.text
             newCategory.color = UIColor.randomFlat().hexValue()
@@ -121,14 +127,12 @@ class CategoryViewController: SwipeTableViewController {
             textField = alertTextField
         }
         
+        alert.addAction(cancel)
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
         
     }
-
-    
-    
 
 }
 
