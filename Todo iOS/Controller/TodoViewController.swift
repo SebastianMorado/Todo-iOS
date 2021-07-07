@@ -69,7 +69,8 @@ class TodoViewController: SwipeTableViewController {
         let buttonTitle = showCompleted ? "Hide Completed" : "Show Completed"
         button.setTitle(buttonTitle, for: .normal)
         button.addTarget(self, action: #selector(toggleCompletedItems(sender:)), for: .touchUpInside)
-        button.setTitleColor(.gray, for: .normal)
+        button.setTitleColor(.darkGray, for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.8929959174, green: 0.8929959174, blue: 0.8929959174, alpha: 1)
         button.layer.borderWidth = 0.4
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
