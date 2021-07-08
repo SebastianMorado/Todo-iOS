@@ -2,7 +2,7 @@
 
 ## What is it?
 
-This app is a sleek alternative to other reminder/list apps. Todo-iOS provides the essential functionality from a To-do list app that most users look for and it presents it in an intuitive way. The apps current layout allows it to be easily extended much further with features if needed.
+This app is a sleek alternative to other reminder/list apps. Todo-iOS provides the essential functionality of a To-do list app that most users look for and it presents it in an intuitive way. The apps current layout allows it to be easily extended much further with features if needed.
 
 ## Features
 
