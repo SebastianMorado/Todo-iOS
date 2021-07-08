@@ -77,6 +77,7 @@
 		645F4615264D075000D4A467 = {
 			isa = PBXGroup;
 			children = (
+				6498BC9C2696EFFC00B06EAA /* Documentation */,
 				645F4620264D075000D4A467 /* Todo iOS */,
 				645F461F264D075000D4A467 /* Products */,
 				F070689863FFADA7575123CC /* Pods */,
@@ -95,7 +96,6 @@
 		645F4620264D075000D4A467 /* Todo iOS */ = {
 			isa = PBXGroup;
 			children = (
-				6498BC9C2696EFFC00B06EAA /* Documentation */,
 				645F463A264D07BA00D4A467 /* Controller */,
 				645F4639264D07B500D4A467 /* View */,
 				645F4638264D07B000D4A467 /* Model */,
