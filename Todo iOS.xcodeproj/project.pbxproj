@@ -19,6 +19,16 @@
 		645F463C264D0B2700D4A467 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645F463B264D0B2700D4A467 /* Constants.swift */; };
 		6468B09626550ECA009AF28A /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468B09526550ECA009AF28A /* SwipeTableViewController.swift */; };
 		646A7A9A26943E0D008E2E9F /* EditCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646A7A9926943E0D008E2E9F /* EditCategoryViewController.swift */; };
+		6498BCA72696F7D600B06EAA /* Swipe Category.png in Resources */ = {isa = PBXBuildFile; fileRef = 6498BC9D2696F7D600B06EAA /* Swipe Category.png */; };
+		6498BCA82696F7D600B06EAA /* Item Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 6498BC9E2696F7D600B06EAA /* Item Screen.png */; };
+		6498BCA92696F7D600B06EAA /* Edit Category.png in Resources */ = {isa = PBXBuildFile; fileRef = 6498BC9F2696F7D600B06EAA /* Edit Category.png */; };
+		6498BCAA2696F7D600B06EAA /* Category Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 6498BCA02696F7D600B06EAA /* Category Screen.png */; };
+		6498BCAB2696F7D600B06EAA /* Search Item.png in Resources */ = {isa = PBXBuildFile; fileRef = 6498BCA12696F7D600B06EAA /* Search Item.png */; };
+		6498BCAC2696F7D600B06EAA /* Show Completed items.png in Resources */ = {isa = PBXBuildFile; fileRef = 6498BCA22696F7D600B06EAA /* Show Completed items.png */; };
+		6498BCAD2696F7D600B06EAA /* Edit Color.png in Resources */ = {isa = PBXBuildFile; fileRef = 6498BCA32696F7D600B06EAA /* Edit Color.png */; };
+		6498BCAE2696F7D600B06EAA /* Edit Item.png in Resources */ = {isa = PBXBuildFile; fileRef = 6498BCA42696F7D600B06EAA /* Edit Item.png */; };
+		6498BCAF2696F7D600B06EAA /* Add Category.png in Resources */ = {isa = PBXBuildFile; fileRef = 6498BCA52696F7D600B06EAA /* Add Category.png */; };
+		6498BCB02696F7D600B06EAA /* Swipe Item.png in Resources */ = {isa = PBXBuildFile; fileRef = 6498BCA62696F7D600B06EAA /* Swipe Item.png */; };
 		B79F52F9C4EBA755EA57AD1B /* Pods_Todo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A54F08EDD615D8BD310FEF57 /* Pods_Todo_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +47,16 @@
 		645F463B264D0B2700D4A467 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6468B09526550ECA009AF28A /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		646A7A9926943E0D008E2E9F /* EditCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryViewController.swift; sourceTree = "<group>"; };
+		6498BC9D2696F7D600B06EAA /* Swipe Category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Swipe Category.png"; sourceTree = "<group>"; };
+		6498BC9E2696F7D600B06EAA /* Item Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Item Screen.png"; sourceTree = "<group>"; };
+		6498BC9F2696F7D600B06EAA /* Edit Category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Edit Category.png"; sourceTree = "<group>"; };
+		6498BCA02696F7D600B06EAA /* Category Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Category Screen.png"; sourceTree = "<group>"; };
+		6498BCA12696F7D600B06EAA /* Search Item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search Item.png"; sourceTree = "<group>"; };
+		6498BCA22696F7D600B06EAA /* Show Completed items.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Show Completed items.png"; sourceTree = "<group>"; };
+		6498BCA32696F7D600B06EAA /* Edit Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Edit Color.png"; sourceTree = "<group>"; };
+		6498BCA42696F7D600B06EAA /* Edit Item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Edit Item.png"; sourceTree = "<group>"; };
+		6498BCA52696F7D600B06EAA /* Add Category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add Category.png"; sourceTree = "<group>"; };
+		6498BCA62696F7D600B06EAA /* Swipe Item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Swipe Item.png"; sourceTree = "<group>"; };
 		A54F08EDD615D8BD310FEF57 /* Pods_Todo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CE1A4DA03BC2E046375EB1 /* Pods-Todo iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo iOS.release.xcconfig"; path = "Target Support Files/Pods-Todo iOS/Pods-Todo iOS.release.xcconfig"; sourceTree = "<group>"; };
 		F9723A83C21D510763E40D13 /* Pods-Todo iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo iOS.debug.xcconfig"; path = "Target Support Files/Pods-Todo iOS/Pods-Todo iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +95,7 @@
 		645F4620264D075000D4A467 /* Todo iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6498BC9C2696EFFC00B06EAA /* Documentation */,
 				645F463A264D07BA00D4A467 /* Controller */,
 				645F4639264D07B500D4A467 /* View */,
 				645F4638264D07B000D4A467 /* Model */,
@@ -114,6 +135,23 @@
 				646A7A9926943E0D008E2E9F /* EditCategoryViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		6498BC9C2696EFFC00B06EAA /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				6498BCA52696F7D600B06EAA /* Add Category.png */,
+				6498BCA02696F7D600B06EAA /* Category Screen.png */,
+				6498BC9F2696F7D600B06EAA /* Edit Category.png */,
+				6498BCA32696F7D600B06EAA /* Edit Color.png */,
+				6498BCA42696F7D600B06EAA /* Edit Item.png */,
+				6498BC9E2696F7D600B06EAA /* Item Screen.png */,
+				6498BCA12696F7D600B06EAA /* Search Item.png */,
+				6498BCA22696F7D600B06EAA /* Show Completed items.png */,
+				6498BC9D2696F7D600B06EAA /* Swipe Category.png */,
+				6498BCA62696F7D600B06EAA /* Swipe Item.png */,
+			);
+			path = Documentation;
 			sourceTree = "<group>";
 		};
 		A2843FB8308A9FA8311E92CB /* Frameworks */ = {
@@ -192,9 +230,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6498BCAA2696F7D600B06EAA /* Category Screen.png in Resources */,
+				6498BCAE2696F7D600B06EAA /* Edit Item.png in Resources */,
+				6498BCAF2696F7D600B06EAA /* Add Category.png in Resources */,
 				645F4631264D075000D4A467 /* LaunchScreen.storyboard in Resources */,
+				6498BCAD2696F7D600B06EAA /* Edit Color.png in Resources */,
+				6498BCA82696F7D600B06EAA /* Item Screen.png in Resources */,
 				645F462E264D075000D4A467 /* Assets.xcassets in Resources */,
 				645F4629264D075000D4A467 /* Main.storyboard in Resources */,
+				6498BCB02696F7D600B06EAA /* Swipe Item.png in Resources */,
+				6498BCAC2696F7D600B06EAA /* Show Completed items.png in Resources */,
+				6498BCA92696F7D600B06EAA /* Edit Category.png in Resources */,
+				6498BCA72696F7D600B06EAA /* Swipe Category.png in Resources */,
+				6498BCAB2696F7D600B06EAA /* Search Item.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
