@@ -6,7 +6,7 @@ This app is a sleek alternative to other reminder/list apps. Todo-iOS provides t
 
 ## Features
 
-As a practice project in conjuction with The App Brewery's Complete App Development Bootcamp, the basic features aimed to be accomplished are:
+As a practice project in conjunction with The App Brewery's Complete App Development Bootcamp, the basic features aimed to be accomplished are:
 1. Create a two-table list app where the parent table will display Categories and the child table will display the actual to-do list items
 2. Allow users to add and delete entries for both tables
 3. Allow users to cross-off and manually search entries in the to-do list table
