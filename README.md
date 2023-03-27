@@ -2,7 +2,7 @@
 
 ## What is it?
 
-This app is a sleek alternative to other reminder/list apps. Todo-iOS provides the essential functionality of a To-do list app that most users look for and it presents it in an intuitive way. The apps current layout allows it to be easily extended much further with features if needed. The app is built on Core Data.
+This app is a sleek alternative to other reminder/list apps. Todo-iOS provides the essential functionality of a To-do list app that most users look for and it presents it in an intuitive way. The apps current layout allows it to be easily extended much further with features if needed. The app is built on UIKit and Core Data.
 
 ## Features
 
@@ -29,6 +29,4 @@ Some additional features I added are:
 
 <img src="https://github.com/SebastianMorado/Todo-iOS/blob/main/Documentation/Item%20Screen.png" height="700"> <img src="https://github.com/SebastianMorado/Todo-iOS/blob/main/Documentation/Show%20Completed%20items.png" height="700"> <img src="https://github.com/SebastianMorado/Todo-iOS/blob/main/Documentation/Swipe%20Item.png" height="700"> <img src="https://github.com/SebastianMorado/Todo-iOS/blob/main/Documentation/Edit%20Item.png" height="700"> <img src="https://github.com/SebastianMorado/Todo-iOS/blob/main/Documentation/Search%20Item.png" height="700">
 
-
->This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
 
