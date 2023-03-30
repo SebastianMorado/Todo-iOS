@@ -44,6 +44,8 @@ class TodoViewController: SwipeTableViewController {
     }
     
     
+    
+    
     //MARK: - UITableViewDataSource
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -61,7 +63,9 @@ class TodoViewController: SwipeTableViewController {
         if section == 0 {
             return nil
         }
-        
+        if itemArray.isEmpty && completedArray.isEmpty {
+            return nil
+        }
         //Create a view to customize the header for the 2nd section
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50))
         //Create and design a button that will allow you to toggle to show the 2nd section
@@ -104,7 +108,10 @@ class TodoViewController: SwipeTableViewController {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
 
         cell.textLabel?.text = currentItem.title
-        cell.accessoryType = currentItem.done ? .checkmark : .none
+        let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 25, height: 20))
+        imgView.image = currentItem.done ? UIImage(systemName: "checkmark.square") : UIImage(systemName: "square")
+        imgView.tintColor = UIColor.black
+        cell.accessoryView = imgView
         
         return cell
     }
@@ -208,8 +215,13 @@ class TodoViewController: SwipeTableViewController {
     
     override func updateModel(at indexPath: IndexPath) {
         //if row is swiped and deleted, this function will update the database
-        context.delete(itemArray[indexPath.row])
-        itemArray.remove(at: indexPath.row)
+        if indexPath.section == 0 {
+            context.delete(itemArray[indexPath.row])
+            itemArray.remove(at: indexPath.row)
+        } else {
+            context.delete(completedArray[indexPath.row])
+            completedArray.remove(at: indexPath.row)
+        }
         saveItems()
     }
     
