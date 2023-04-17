@@ -2,7 +2,7 @@
 
 ## What is it?
 
-This app is a sleek alternative to other reminder/list apps. Todo-iOS provides the essential functionality of a To-do list app that most users look for and it presents it in an intuitive way. The apps current layout allows it to be easily extended much further with features if needed. The app is built on UIKit and Core Data.
+Todo-iOS is a sleek alternative to other reminder/list apps. This app provides the essential functionality of a To-do list app that most users look for (persistent and organized data, easy to navigate and edit) and presents it in an intuitive yet customizable way.  The apps current layout allows it to be easily extended further with more features. The app is built on UIKit and Core Data.
 
 ## Features
 
